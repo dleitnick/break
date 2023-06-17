@@ -14,6 +14,7 @@ function copyToClipboard() {
 
   // Create a new date and add the specified minutes to it
   let date = new Date();
+  // If halfway through the minute, add 1
   if (date.getSeconds() > 29) timeToAdd++;
   date.setMinutes(date.getMinutes() + timeToAdd);
 
@@ -36,16 +37,6 @@ function copyToClipboard() {
 
       // Set a timer to change the color and text back after 10 seconds
       setTimeout(function () {
-        // Get computed style of the root
-        const style = getComputedStyle(document.documentElement);
-        // Get background color from CSS variable
-        const bgColor = String(
-          style.getPropertyValue("--input-background")
-        ).trim();
-        // Get border color from CSS variable
-        const borderColor = String(
-          style.getPropertyValue("--input-border")
-        ).trim();
         button.style.backgroundColor = "";
         button.style.borderColor = "";
         button.style.color = "";
