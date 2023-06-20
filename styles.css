@@ -15,7 +15,7 @@
   
   h1 {
     color: #ffffff; /* This will make the text color white. Replace with any color you like. */
-    font-size: 48px; /* This sets the font size to 32 pixels. Replace with the size you prefer. */
+    font-size: 56px; /* This sets the font size to 32 pixels. Replace with the size you prefer. */
   }
   
   .form-field,
@@ -55,6 +55,7 @@
     border-color: var(--input-border-focus);
     background-color: var(--group-background-focus);
     color: var(--group-color-focus);
+    cursor: pointer;
   }
   
   .form-field:disabled,
@@ -92,6 +93,14 @@
     background: var(--group-background-focus);
     display: flex;
     justify-content: center;
+  }
+
+  #displayTime {
+    color: #ffffff; 
+    text-align: center; 
+    font-size: 36px;
+    padding-top: 10px;
+    min-height: 50px; /* adjust as needed */
   }
   
   /* To centralize */
