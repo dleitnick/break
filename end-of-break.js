@@ -1,28 +1,6 @@
-function formatAMPM(date) {
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  const ampm = hours >= 12 ? "pm" : "am";
-  hours %= 12;
-  hours = hours ? hours : 12; // the hour '0' should be '12'
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-  return hours + ":" + minutes + " " + ampm;
-}
-
 let timeToAdd = 10;
 
 function copyToClipboard() {
-  // // Get the time to add from the input field
-  // let timeToAdd = parseInt(document.getElementById("timeToAdd").value);
-
-  // // Create a new date and add the specified minutes to it
-  // let date = new Date();
-  // // If halfway through the minute, add 1
-  // if (date.getSeconds() > 29) timeToAdd++;
-  // date.setMinutes(date.getMinutes() + timeToAdd);
-
-  // // Create the string to copy to the clipboard
-  // let clipboardText = "Return at " + formatAMPM(date);
-
   // Get the button
   let button = document.getElementById("copyButton");
 
@@ -61,19 +39,6 @@ function returnTime() {
 }
 
 document.querySelector('#copyButton').addEventListener('click', function() {
-  // // Get the amount of time entered by the user
-  // var timeAdded = parseInt(document.querySelector('#timeToAdd').value) || 10;
-  // // Calculate the future time
-  // var currentTime = new Date();
-  // if (currentTime.getSeconds() > 29) timeAdded++;
-  // currentTime.setMinutes(currentTime.getMinutes() + timeAdded);
-
-  // // Format the future time as a string
-  // var futureTime = currentTime.toLocaleTimeString([], {hour: 'numeric', minute:'2-digit', hour12: true});
-  // var copyText = "Return at " + futureTime;
-
-  // console.log(copyText); // Debug line
-
   // Update the text content of the displayTime element
   document.querySelector('#displayTime').textContent = returnTime();
   
