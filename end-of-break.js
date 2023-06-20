@@ -46,6 +46,4 @@ document.querySelector('#copyButton').addEventListener('click', function() {
   setTimeout(function() {
     document.querySelector('#displayTime').textContent = '';
   }, timeToAdd * 60 * 1000);
-
-  // ... Rest of your click event handler code ...
 });
